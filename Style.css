@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;   /* this was got from google and i had to copy and paste it inside here from Google fonts */
+
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/Banner.png);
+    background-position: center;
+    background-size: cover; 
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding:2% 6%;
+    justify-content: space-between;     /*All my navigation bars Home,About,Projects,Contact*/
+    align-items: center;
+    
+}
+nav img{
+    width: 110px;      /* This works with the logo on the top left */
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+} 
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative; 
+} 
+
+.nav-links ul li a{          /*Navigatition button */
+    color: #fff;
+    text-decoration: none;
+    font-size: 19px;         /*Navigatition button */
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: orange;    /*the lines under the Home, About project, contact */
+    display: block;
+    margin: auto;
+} 
+
+.nav-links ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: #f44336;  /*the revolves around the lines in for the Top right section of the page so the lines shows when someone hovers over it on the website */
+    display: block;
+    margin: auto;
+    transition: auto;
+    transition: 0.05s;
+} 
+
+.nav-links ul li:hover::after{
+    width: 100%;                     /*the revolves around the lines in for the Top right section of the page so the lines shows when someone hovers over it on the website */
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute; 
+    top: 50%;                   /* this changes the alignment of the top paragraph in the jome page.*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;              /* this represents the long paragraph in the home page top */
+    color: #fff;
+} 
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;                /* this is for the Visit us button */
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+} 
+
+.hero-btn:hover{
+    border: 1px solid White;    /* also for the Visit us button */
+    background: #f44336;                
+    transition: 1s;
+} 
+
+nav .fa{
+    display: none;   /*I AM STUCK HEREEEEEE *SIGGGHHHHH* */
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 29px;      /* this is  the font size for a small device like a (phone) the Dorbe caption */
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 27vh;   /* this is the length of nav bar in the preset for a smart device */
+        width: 184px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;  /* This is for the bar on the mobile device on the top right */
+    } 
+
+ 
+nav .fa{
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+}/* anything after this is not included in the mobile section*/
+
+.nav-links ul{
+    padding: 30px;
+}
+
+
+/*this hid the close and menu bar from both the website and the mobile devices and it had to be ahead @media for it work work (the guy in the video said)*/
+
+/*----- Course -----*/
+
+.course{
+    width:80%;
+    margin: auto;
+    text-align: center; /*the space between the background and the heading*/
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;       /* this is for the main heading of the title after the background pictiure*/
+    font-weight: 600px;
+}
+
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;            /* this is for the two boxes in the middle of the page */
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+     margin-top: 5%;
+     display: flex;
+     justify-content: space-between;  /*this section will arrange the section into its places */
+}
+
+.course-col{
+    flex-basis: 47%;
+    background: #fff3ff;
+    border-radius: 10px;
+    margin-bottom: 5%;        /* this is for the two boxes in the middle of the page */
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s; 
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+ 
+.course-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);   /* this is for the two boxes in the middle of the page */
+} 
+
+@media(max-width: 700px) {
+    .row{flex-direction: column;}
+}
+
+/*------- Campus --------*/
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;  /* this is for the image which on our global campus */
+    position: relative;
+    overflow: hidden; 
+}
+.campus-col img{
+    width: 100%;      /* this is for the image which on our global campus */
+    display: block;   /* this makes the corner of the three boxes round */
+}
+.layer{
+    background: transparent ;  /* this is for the image which on our global campus */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(84, 77, 77, 0.7);  /* this will change the pictures colour when ever i hover over them*/
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;        /* this section is for the 3 body inside, it changes title */
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+} 
+
+.layer:hover h3{
+    Bottom: 49%;      /* when someone hovers over the 3 images the name on that page will show */
+    opacity: 1;
+}
+/*------ facilities -------*/
+
+.facilities{ 
+    width: 80%;
+    margin: auto;
+    text-align: center;    /* this is for the section under the two pictures */
+    padding-top: 30px;
+}
+
+.facilities-col{ 
+    flex-basis: 31%;
+    border-radius:10px;
+    margin-bottom: 5%;   /* this is for the 3 pictures */
+    text-align: left;
+    text-align: center;
+}
+.facilities-col img{
+    width:100%;              /* this is for the 3 pictures */
+    border-radius: 15px;
+}
+
+.facilities-col p{ 
+    padding: 0%;              /* this is for the 3 pictures but the (paragraph section) */
+}
+
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/*------ testmonials -----*/
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 2px;
+    text-align: center;
+}
+
+.testimonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex; 
+} 
+
+.testimonial-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testimonial-col p{
+    padding: 0;
+}
+
+.testimonial-col h3{
+    margin-top:15px;
+    text-align: left;
+} 
+
+.testimonial-col .fa{
+    color: #f44336;
+}
+
+/*@media(max-width: 700px){
+    .testimonial-col img{
+       margin-left: 0px;    /* this section will make the page look nicer its to make the spaces around the picture but theres no picture atm look nicer 
+       margin-right: 15px;
+}
+
+} */
+
+
+
+
+/* ------ Call to actiom ------*/
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(Images/ehis10.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;           /*   This is for the section under the one with stars (contact us) */
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: white;
+    margin-bottom: 40px;          /*   This is for the section under the one with stars (contact us) */
+    padding: 0;
+}
+
+@media(max-width: 700px) {
+    .cta h1{
+        font-size: 24px;         /* this is for the section when on a small device */
+    }
+}
+
+/*------- footer------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
